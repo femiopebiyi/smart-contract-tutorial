@@ -11,6 +11,14 @@ contract SimpleStorage {
         favNum = _favoriteNumber;
         favNum  += 4;
      }
+        //view and pure function
+     function retrieve() public view returns (uint256){
+        return favNum;
+     }
+
+     function add() public pure returns (uint256){
+        return (1+1);
+     }
 }
 
 //0xd9145CCE52D386f254917e481eB44e9943F39138
