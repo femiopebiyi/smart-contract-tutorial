@@ -5,7 +5,18 @@ contract SimpleStorage {
      //boolean, uint, int, address, bytes
 
      // this gets initialized to 0
-     uint256 public favNum;
+     uint256 favNum;
+
+     People public person = People({
+        favNum: 2, name: "patrick star"
+     });
+
+     struct People{
+        uint256 favNum;
+        string name;
+     }
+    
+    People[] public people;
 
      function store(uint256 _favoriteNumber) public {
         favNum = _favoriteNumber;
@@ -18,6 +29,11 @@ contract SimpleStorage {
 
      function add() public pure returns (uint256){
         return (1+1);
+     }
+
+     function addPerson(string memory _name, uint256 _favNum) public {
+        //People memory newPerson = People({favNum: _favNum, name: _name});
+        people.push(People(_favNum, _name));
      }
 }
 
