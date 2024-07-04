@@ -11,6 +11,8 @@ contract SimpleStorage {
    //      favNum: 2, name: "patrick star"
    //   });
 
+   mapping(string => uint256) public nameToFavNum;
+
      struct People{
       string name;
       uint256 favNum;
@@ -36,6 +38,7 @@ contract SimpleStorage {
      function addPerson(string memory _name, uint256 _favNum) public {
         //People memory newPerson = People({favNum: _favNum, name: _name});
         people.push(People(_name, _favNum));
+        nameToFavNum[_name] = _favNum;
      }
 }
 
