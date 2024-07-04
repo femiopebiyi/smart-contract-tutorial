@@ -32,6 +32,7 @@ contract SimpleStorage {
         return (1+1);
      }
 
+      //calldata memory and storage
      function addPerson(string memory _name, uint256 _favNum) public {
         //People memory newPerson = People({favNum: _favNum, name: _name});
         people.push(People(_name, _favNum));
