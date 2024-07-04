@@ -7,13 +7,14 @@ contract SimpleStorage {
      // this gets initialized to 0
      uint256 favNum;
 
-     People public person = People({
-        favNum: 2, name: "patrick star"
-     });
+   //   People public person = People({
+   //      favNum: 2, name: "patrick star"
+   //   });
 
      struct People{
-        uint256 favNum;
-        string name;
+      string name;
+      uint256 favNum;
+        
      }
     
     People[] public people;
@@ -33,7 +34,7 @@ contract SimpleStorage {
 
      function addPerson(string memory _name, uint256 _favNum) public {
         //People memory newPerson = People({favNum: _favNum, name: _name});
-        people.push(People(_favNum, _name));
+        people.push(People(_name, _favNum));
      }
 }
 
