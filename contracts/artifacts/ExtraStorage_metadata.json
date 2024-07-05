@@ -7,20 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "createSimpleStorageContract",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "simpleStorageIndex",
-						"type": "uint256"
-					}
-				],
-				"name": "sfAdd",
+				"name": "add",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -28,28 +15,23 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "simpleStorageIndex",
-						"type": "uint256"
-					},
-					{
 						"internalType": "string",
-						"name": "simpleStorageName",
+						"name": "_name",
 						"type": "string"
 					},
 					{
 						"internalType": "uint256",
-						"name": "simpleStorageFavNum",
+						"name": "_favNum",
 						"type": "uint256"
 					}
 				],
-				"name": "sfAddPerson",
+				"name": "addPerson",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -57,12 +39,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "simpleStorageIndex",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
-				"name": "sfGet",
+				"name": "nameToFavNum",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -77,37 +59,50 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_simpleStorageIndex",
+						"name": "",
 						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_simpleStorageNumber",
+						"name": "favNum",
 						"type": "uint256"
 					}
 				],
-				"name": "sfStore",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "simpleStorageArray",
-				"outputs": [
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
-						"internalType": "contract SimpleStorage",
-						"name": "",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -124,7 +119,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/StorageFactory.sol": "StorageFactory"
+			"contracts/ExtraStorage.sol": "ExtraStorage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -138,20 +133,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SimpleStorage.sol": {
-			"keccak256": "0xdb92c1ae6a2ea5347363a3f5526caad20c442b2d8f3183227b55f0180afa2316",
+		"contracts/ExtraStorage.sol": {
+			"keccak256": "0x9495273500301ba9add2616f2fa22dc4fcb600f3ca97552789c7f4e8f449b458",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://342743f9aea71631a5224a19e1c593f686a035c598f4c11fc8fa217e3c54a0ae",
-				"dweb:/ipfs/QmW6L2cBMXNkZmQYXjyGAjZLg75kPVDjRuWJN4WgkaEyKY"
+				"bzz-raw://3fdad70d88dcfc5efeaaa97f7a444e5ea95efa6099b8e2191b1017c865233b6f",
+				"dweb:/ipfs/QmUNFvZi6pLNgYnkqbg78PzB5Am7RdSefSj6uphMTueFnL"
 			]
 		},
-		"contracts/StorageFactory.sol": {
-			"keccak256": "0xae7e3769a6a329e5520f1a2ff365540bccbe9cd551b8fc5e9c83793cfda68c30",
+		"contracts/SimpleStorage.sol": {
+			"keccak256": "0xb4f6730315c748d63cb387099243f029dd23085dd0bb3de46da60a3092e5be04",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dc076ac673a17984d0c5e83bc67830cf93fec0e83608ee1f5913569c3a2b9318",
-				"dweb:/ipfs/QmTxZrAtRnvQXRjKc7vKNXHHf3aFSjv4qzHnQDGGGcCv5S"
+				"bzz-raw://6073e60bdd2437398cd6e869fd5f81529d2b522af7f4a9439ca29dd63f713d6e",
+				"dweb:/ipfs/QmRERAns15j8zC51qyRN7qbbjHt42PNdWQjQ9wrZjkrENT"
 			]
 		}
 	},

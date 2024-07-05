@@ -31,4 +31,15 @@ contract StorageFactory{
         SimpleStorage simpleStorage = simpleStorageArray[simpleStorageIndex];
         return  simpleStorage.add();
     }
+
+    // function sfAddPerson(uint256 simpleStorageIndex, string memory simpleStorageName, uint256 simpleStorageFavNum ) public{
+    //     SimpleStorage simpleStorage = simpleStorageArray[simpleStorageIndex];
+    //     simpleStorage.addPerson(simpleStorageName, simpleStorageFavNum);
+    // }
+
+    // function sfGetPerson (uint256 simpleStorageIndex, string memory simpleStorageName) public view {
+    //     SimpleStorage simpleStorage = simpleStorageArray[simpleStorageIndex];
+
+    //     return simpleStorage.nameToFavNum();
+    // }
 }
