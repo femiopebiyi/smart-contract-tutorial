@@ -27,4 +27,8 @@ contract StorageFactory{
     return simpleStorage.retrieve();
 
     }
+    function sfAdd(uint256 simpleStorageIndex) public view returns(uint256){
+        SimpleStorage simpleStorage = simpleStorageArray[simpleStorageIndex];
+        return  simpleStorage.add();
+    }
 }

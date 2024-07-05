@@ -20,6 +20,25 @@
 						"type": "uint256"
 					}
 				],
+				"name": "sfAdd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "simpleStorageIndex",
+						"type": "uint256"
+					}
+				],
 				"name": "sfGet",
 				"outputs": [
 					{
@@ -105,11 +124,11 @@
 			]
 		},
 		"contracts/StorageFactory.sol": {
-			"keccak256": "0x9e598a75150ad9a546b09285656f4cd45948667d625cc01850885021c0308ef3",
+			"keccak256": "0xdeed4b44b7d0c9fdd551409c9c428835ea49e468f23fdf7df8ecccb832ec793e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a44fdabf432612fba22bf2136bb3256eb46feeb4a179e1ef4fb14d1d6694bc02",
-				"dweb:/ipfs/QmR6sKaFjgxujdXwE7XCJYaWXsv1ZHUhQTNGMCwh1CghDu"
+				"bzz-raw://1870fcb14e7d5e85b63d95f51c6cb95a637756b75aef0f6b4e6fff194e8e2f02",
+				"dweb:/ipfs/QmZosTJgAGXczRyRX1uyXYQnkBLff8ajTjv3nT6btz8GMD"
 			]
 		}
 	},
