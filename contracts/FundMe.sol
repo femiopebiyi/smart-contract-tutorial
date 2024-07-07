@@ -6,6 +6,8 @@ pragma solidity ^0.8.8;
 //set minimum funding value in usd
 
 contract FundMe{
+   uint256 public minimumUsd = 50;
+
      function fund() public payable {
         //set minimum find amount
         require(msg.value >= 1e18, "didnt send enough");
