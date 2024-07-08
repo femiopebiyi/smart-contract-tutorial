@@ -11,6 +11,12 @@ contract FundMe{
    using PriceConverter for uint256;
    uint256 public minimumUsd = 50 * 1e18;
    address[] public funders;
+
+   address public owner;
+
+   constructor() {
+      owner = msg.sender;
+   }
    mapping (address => uint256) public addressToAmountFunded;
 
      function fund() public payable {
