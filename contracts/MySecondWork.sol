@@ -13,9 +13,14 @@ contract MySecondWork {
         detail.push(Details("femi", 23, msg.sender));
     }
 
+    mapping (string => uint256) public  nameToScore;
+
     Details[] public  detail;
 
-    function setTestScores (string memory _name, uint _age, address _addy) public {
-        detail.push(Details(_name, _age, _addy));
+    function setTestScores (string memory _name, uint _age, uint256 _score) public {
+        detail.push(Details(_name, _age, msg.sender));
+        nameToScore[_name] = _score;
     }
+
+   
 }
