@@ -9,10 +9,10 @@ import "contracts/PriceConverter.sol";
 
 contract FundMe{
    using PriceConverter for uint256;
-   uint256 public minimumUsd = 50 * 1e18;
+   uint256 public constant minimumUsd = 50 * 1e18;
    address[] public funders;
 
-   address public owner;
+   address public immutable owner;
 
    constructor() {
       owner = msg.sender;
